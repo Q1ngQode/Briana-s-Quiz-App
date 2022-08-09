@@ -115,3 +115,7 @@ incrementScore = num => {
 };
 
 startGame();
+
+
+game.classList.remove("hidden"); 
+loaderDisplayer.classList.add('hidden');

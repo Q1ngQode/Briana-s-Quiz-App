@@ -71,6 +71,14 @@
   <div class="container">
     <div id="end" class="flex-center flex-column">
         <button type="submit" class="sbtn btn btn-secondary btn-c" onclick="loader()">New Quiz</button>
+<div class="loader">
+  <div class="loading">
+  </div>
+</div>
+<script type="text/javascript">
+    function loader() {
+        document.getElementsByClassName("loader")[0].style.display = "";
+</script>    
       </div>
     </div>
     <script src="game.js"></script>

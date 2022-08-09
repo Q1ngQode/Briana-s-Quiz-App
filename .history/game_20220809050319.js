@@ -114,4 +114,14 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+function loader() {
+    const loaderDisplayer = document.querySelector('index.html');
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', () => {
+  })
+}
+
+loader();
+
 startGame();

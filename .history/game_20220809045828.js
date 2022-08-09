@@ -114,4 +114,15 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+function loader() {
+    const loaderDisplayer = document.querySelector('.spinner-displayer');
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', () => {
+    spinnerDisplayer.classList.add('loading');
+  })
+}
+
+spinner();
+
 startGame();

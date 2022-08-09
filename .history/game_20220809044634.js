@@ -5,7 +5,7 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
-
+const playAgain = document.getElementById("playAgain");
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -66,6 +66,8 @@ getNewQuestion = () => {
     localStorage.setItem("mostRecentScore", score);
     //Start new quiz 
     return window.location.assign("index.html");
+    playAgain.classList.remove("hidden");
+    loader.classList.add("hidden");
   }
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;

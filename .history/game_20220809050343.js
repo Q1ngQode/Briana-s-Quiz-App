@@ -114,4 +114,14 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+function loader() {
+    const loaderDisplayer = document.querySelector('index.html');
+    const btn = document.getElementById('btn');
+    game.classList.remove("hidden"); 
+    loaderDisplayer.classList.add('hidden');
+
+    btn.addEventListener('click', () => {
+  })
+}
+
 startGame();
