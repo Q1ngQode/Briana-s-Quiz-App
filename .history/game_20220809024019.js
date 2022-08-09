@@ -40,7 +40,7 @@ fetch(
 
       return formattedQuestion;
     });
-    game.classList.remove("hidden");
+    game.class
     startGame();
   })
   .catch(err => {
