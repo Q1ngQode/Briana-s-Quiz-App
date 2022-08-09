@@ -50,10 +50,10 @@ startGame = () => {
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //Refresh quiz page 
-    return window.location.assign("questions.JSON");
+    return window.location.assign("index.html");
   }
   questionCounter++;
-  const questionIndex = Math.floor(Math.random()= availableQuesions.length);
+  const questionIndex = Math.floor(Math.random()=availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];
   question.innerText = currentQuestion.question;
 
