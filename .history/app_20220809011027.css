@@ -21,7 +21,7 @@
   
   h1 {
     font-size: 5.4rem;
-    color: #f570c8;
+    color: #56a5eb;
     margin-bottom: 5rem;
   }
   
@@ -45,7 +45,7 @@
   
   .container {
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,7 @@
     padding: 2rem;
   }
   
-  .container > {
+  .container > * {
     width: 100%;
   }
   
@@ -86,16 +86,16 @@
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #f570c8;
+    border: 0.1rem solid #56a5eb;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #f570c8;
+    color: #56a5eb;
     background-color: white;
   }
   
   .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 #db84be(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
@@ -120,9 +120,9 @@
     padding: 1.5rem;
     font-size: 1.8rem;
     border: none;
-    box-shadow: 0 0.1rem 1.4rem 0 #f570c8(86, 185, 235, 0.5);
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   }
   
   input::placeholder {
-    color: rgb(170, 170, 170);
+    color: #aaa;
   }

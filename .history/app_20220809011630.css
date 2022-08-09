@@ -45,7 +45,7 @@
   
   .container {
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,7 @@
     padding: 2rem;
   }
   
-  .container > {
+  .container > * {
     width: 100%;
   }
   
@@ -120,9 +120,9 @@
     padding: 1.5rem;
     font-size: 1.8rem;
     border: none;
-    box-shadow: 0 0.1rem 1.4rem 0 #f570c8(86, 185, 235, 0.5);
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   }
   
   input::placeholder {
-    color: rgb(170, 170, 170);
+    color: #aaa;
   }
