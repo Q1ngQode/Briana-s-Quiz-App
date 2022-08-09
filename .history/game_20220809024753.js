@@ -57,7 +57,7 @@ startGame = () => {
   availableQuesions = [...questions];
   getNewQuestion();
   game.classList.remove("hidden");
-  loader.classList.add("hidden");
+    loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {
