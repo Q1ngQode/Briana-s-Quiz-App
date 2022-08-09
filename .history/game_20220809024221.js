@@ -41,7 +41,7 @@ fetch(
       return formattedQuestion;
     });
     game.classList.remove("hidden");
-    loader.classList.add("hidden");
+    loader.classList.add('')
     startGame();
   })
   .catch(err => {
