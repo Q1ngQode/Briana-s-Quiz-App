@@ -12,7 +12,7 @@ let availableQuesions = [];
 let questions = [];
 
 fetch(
-  "https://opentdb.com/api.php?amount=10&encode=url3986"
+  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
 )
   .then(res => {
     return res.json();
@@ -59,7 +59,7 @@ getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("index.html");
+    return window.location.assign("/end.html");
   }
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -107,5 +107,49 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
+
+
+
+
+
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  console.log(availableQuesions);
+  getNewQuestion();
+};
+
+getNewQuestion = () => {
+  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    //Refresh quiz page 
+    return window.location.assign("index.html");
+  }
+  questionCounter++;
+  const questionIndex = Math.floor(Math.random()= availableQuesions.length);
+  currentQuestion = availableQuesions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+  choices.forEach(choice => {
+    const number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+  availableQuesions.splice(questionIndex, 1);
+  console.log(availableQuesions);
+  acceptingAnswers = true;
+};
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+    console.log(selectedAnswer);
+    getNewQuestion();
+  });
+});
 
 startGame();

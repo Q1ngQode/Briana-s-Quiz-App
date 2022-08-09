@@ -12,7 +12,7 @@ let availableQuesions = [];
 let questions = [];
 
 fetch(
-  "https://opentdb.com/api.php?amount=10&encode=url3986"
+  ""
 )
   .then(res => {
     return res.json();
