@@ -7,7 +7,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-let questions = [];
+let questions = [...];
 
 //CONSTANTS
 const CORRECT_BONUS = 10;

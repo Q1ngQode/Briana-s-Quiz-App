@@ -7,7 +7,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-let questions = [];
+let questions = [...
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -24,7 +24,7 @@ startGame = () => {
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //Refresh quiz page 
-    return window.location.assign("index.html");
+    return window.location.assign("questions.JSON");
   }
   questionCounter++;
   const questionIndex = Math.floor(Math.random()= availableQuesions.length);
