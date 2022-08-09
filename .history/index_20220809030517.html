@@ -67,10 +67,29 @@
     <script src="game.js"></script>
   </body>
   <html lang="en">
+  
   <body>
   </div>
   <div class="container">
     <div id="end" class="flex-center flex-column">
+      <h1 id="finalScore" class="mt-5px"></h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
         <a class="btn" href="/index.html">Play Again</a>
       </div>
     </div>

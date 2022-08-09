@@ -71,6 +71,24 @@
   </div>
   <div class="container">
     <div id="end" class="flex-center flex-column">
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+            margin-top
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
         <a class="btn" href="/index.html">Play Again</a>
       </div>
     </div>
