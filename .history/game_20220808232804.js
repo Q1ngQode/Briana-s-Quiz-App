@@ -49,7 +49,7 @@ startGame = () => {
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    //Refresh quiz page 
+    //Refresh page
     return window.location.assign("index.html");
   }
   questionCounter++;
