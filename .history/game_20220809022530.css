@@ -63,14 +63,13 @@
   }
 
   /* LOADER */
-  
 #loader {
     border: 1.6rem solid white;
     border-radius: 50%;
     border-top: 1.6rem solid #f570c8;
     width: 12rem;
     height: 12rem;
-    animation: spin 3s linear infinite;
+    animation: spin s linear infinite;
   }
   
   @keyframes spin {
