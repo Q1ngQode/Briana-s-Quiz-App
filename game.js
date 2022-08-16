@@ -14,6 +14,32 @@ let availableQuesions = [];
 
 let questions = [];
 
+window.addEventListener('load', () => {
+  if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'light');
+  }
+
+  const themeSelector = document.querySelector('#themeSelector');
+  if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+      themeSelector.textContent = '☀️';
+  } else {
+      themeSelector.textContent = '🌙️';
+  }
+
+  themeSelector.addEventListener('click', () => {
+      if (localStorage.getItem('theme') === 'light') {
+          localStorage.setItem('theme', 'dark');
+          themeSelector.textContent = '☀️';
+      } else {
+          localStorage.setItem('theme', 'light');
+          themeSelector.textContent = '🌙️';
+      }
+
+      document.body.classList.toggle('dark');
+  });
+});
+
 fetch(
   "https://opentdb.com/api.php?amount=10&category=18"
 )
