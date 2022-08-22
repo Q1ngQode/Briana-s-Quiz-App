@@ -19,8 +19,13 @@
     margin-bottom: 0;
   }
 
- 
-
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
   h1 {
     font-size: 5.4rem;
     color: #f570c8;

@@ -14,28 +14,7 @@
     transition: transform 150ms;
   }
 
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
   
-  /* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0; 
-  height: 0;
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
   .dark {
     background-color: #1a1d24; 
